@@ -14,7 +14,26 @@ $(document).ready(function(){
   var myClass = $(".zebra");
   //myClass.css("border", "2.5px dashed black");
 
-  $(".noBorder").click(function(){
-    $(this).addClass('zebra');
+  // $(".noBorder").click(function(){
+  //   $(this).addClass('zebra');      
+  // });
+
+  var paragraph = $('p').css('cursor', 'pointer');
+
+  paragraph.click(function(){
+  var that = $(this);
+  
+  if(!that.hasClass('zebra')){
+    that.addClass('zebra');      
+
+  } else if(!that.hasClass('grande')){
+    that.addClass('grande');
+
+  } else if (that.hasClass('grande') && that.hasClass('zebra')){
+    that.removeClass('zebra');
+    that.removeClass('grande')
+
+  } 
   });
+
 });
