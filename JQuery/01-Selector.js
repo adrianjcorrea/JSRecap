@@ -6,12 +6,12 @@
 
 $(document).ready(function(){
   //ID selectors.
-  $("#red").css("background", "red").css("color", "white");
-  $("#blue").css("background", "blue");
-  $("#black").css( "background", "black").css("color", "white");
+  $('#red').css('background', 'red').css('color', 'white');
+  $('#blue').css('background', 'blue');
+  $('#black').css('background', 'black').css('color', 'white');
 
   //CLASS Selectors
-  var myClass = $(".zebra");
+  var myClass = $('.zebra');
   //myClass.css("border", "2.5px dashed black");
 
   // $(".noBorder").click(function(){
@@ -36,4 +36,7 @@ $(document).ready(function(){
   } 
   });
 
+  //Selecting by attribute
+  $('[title="Facebook"]').css('background', '#ccc');
+  $('[title="Youtube"]').css('background', '#ADD8E6')
 });
