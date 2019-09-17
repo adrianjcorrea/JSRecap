@@ -5,9 +5,16 @@
 //});
 
 $(document).ready(function(){
-  var red = $("#red").css("background", "red").css("color", "white");
+  //ID selectors.
+  $("#red").css("background", "red").css("color", "white");
+  $("#blue").css("background", "blue");
+  $("#black").css( "background", "black").css("color", "white");
 
-  var blue = $("#blue").css("background", "blue");
-  $("#yellow").css( "background", "yellow").css("color", "green");
+  //CLASS Selectors
+  var myClass = $(".zebra");
+  //myClass.css("border", "2.5px dashed black");
 
+  $(".noBorder").click(function(){
+    $(this).addClass('zebra');
+  });
 });
