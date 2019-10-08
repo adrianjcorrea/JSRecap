@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Unload Handler</title>
+</head>
+<body >
+    <h1>Recap JQuery from Udemy course.</h1>
+    <iframe id="IframeChild" src="child.html" frameborder="1"></iframe>
+    <button id="removeChild" >Remove Child HTML</button>
+    <script>
+      const btnRemoveChild = document.getElementById("removeChild");
+      btnRemoveChild,addEventListener("click", function(){
+          const iFrameChild = document.getElementById("IframeChild");
+          iFrameChild.src = "";
+      });
+    </script>
+
+</body>
+</html>
