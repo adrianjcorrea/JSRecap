@@ -13,10 +13,25 @@
     <button id="removeChild" >Remove Child HTML</button>
     <script>
       const btnRemoveChild = document.getElementById("removeChild");
-      btnRemoveChild,addEventListener("click", function(){
+      btnRemoveChild.addEventListener("click", function(){
           const iFrameChild = document.getElementById("IframeChild");
           iFrameChild.src = "";
       });
+      
+      var sure = false;
+      var intervalLink = false;
+      function areYouSure(){
+        if(allowPrompt){
+          if(!sure && !intervalLink && true){
+            var confirmMSG = "Wait \n\n Are you Sure You Want To leave";
+            return confirmMSG
+          }
+        }else{
+            allowPrompt = true;
+        }
+      }
+      var allowPrompt = true;
+      window.onbeforeunload = areYouSure;
     </script>
 
 </body>
