@@ -18,20 +18,14 @@
           iFrameChild.src = "";
       });
       
-      var sure = false;
-      var intervalLink = false;
-      function areYouSure(){
-        if(allowPrompt){
-          if(!sure && !intervalLink && true){
-            var confirmMSG = "Wait \n\n Are you Sure You Want To leave";
-            return confirmMSG
-          }
-        }else{
-            allowPrompt = true;
-        }
-      }
-      var allowPrompt = true;
-      window.onbeforeunload = areYouSure;
+      function handleWindowClose()
+{
+  if((window.event.clientX <0) || (window.event.clientY <0))
+    {
+	  window.open("https://www.biblegateway.com/passage/?search=1+Juan+2%3A19&version=RVR1960");
+    }
+}
+        window.onbeforeunload = handleWindowClose;
     </script>
 
 </body>
