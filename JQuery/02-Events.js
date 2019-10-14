@@ -26,5 +26,20 @@ $(document).ready(function() {
 
     box.dblclick(function() {
         $(this).css("background","purple").css("color","black")
-    })
+    });
+    
+    //Blur and onFocus
+    var name = $("#name");
+    name.focus(function(){
+        $(this).css("border", "5px solid green");
+    });
+     
+    name.blur(function(){
+        $(this).css("border", "1px solid #ccc");
+        var valor = $(this).val();
+        $("#datos").text(valor).show();
+    });
+    
+
+
 });
