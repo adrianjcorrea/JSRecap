@@ -38,5 +38,11 @@ $(document).ready(function(){
 
   //Selecting by attribute
   $('[title="Facebook"]').css('background', '#ccc');
-  $('[title="Youtube"]').css('background', '#ADD8E6')
+  $('[title="Youtube"]').css('background', '#ADD8E6');
+
+  //Other selectors
+
+  //$('p, a').addClass('superior-margin');
+  var search = $("#caja").eq(0).parent().parent().parent().find('.underLine');
+  console.log(search);
 });
