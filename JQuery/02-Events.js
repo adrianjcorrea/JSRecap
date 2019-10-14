@@ -17,5 +17,14 @@ $(document).ready(function() {
         $(this).css("background", "green");
     }
     //HOVER EFFECT
-    box.hover(changeRed,changeGreen)
+    box.hover(changeRed,changeGreen);
+
+    //Click & DoubleClick.
+    box.click(function() {
+        $(this).css("background","blue").css("color","white")
+    });
+
+    box.dblclick(function() {
+        $(this).css("background","purple").css("color","black")
+    })
 });
