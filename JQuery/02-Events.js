@@ -1,3 +1,11 @@
 $(document).ready(function() {
-    alert("events charged.")
+    //MouseOver and MouseOut.
+    var box = $('#box');
+    box.mouseover(function(){
+        $(this).css("background","red")
+    });
+
+    box.mouseout(function(){
+        $(this).css("background","green")
+    });
 });
