@@ -1,6 +1,7 @@
 $(document).ready(function() {
     //MOUSEOVER AND MOUSEOUT.
     var box = $('#box');
+    var datos = $("#datos");
     // box.mouseover(function(){
     //     $(this).css("background","red")
     // });
@@ -37,9 +38,23 @@ $(document).ready(function() {
     name.blur(function(){
         $(this).css("border", "1px solid #ccc");
         var valor = $(this).val();
-        $("#datos").text(valor).show();
+        datos.text(valor).show();
     });
-    
 
+    //MouseDown & MouseUp.
+    datos.mousedown(function(){
+        $(this).css("border-color", "blue")
+    });
 
+    datos.mouseup(function(){
+        $(this).css("border-color", "black");
+    });
+
+    //MouseMove.
+    $(document).mousemove(function(){
+        var follow = $("#follow");
+        follow.css("left", event.clientX);
+        follow.css("top", event.clientY)
+
+    })
 });
